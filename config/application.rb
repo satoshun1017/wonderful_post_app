@@ -15,6 +15,15 @@ require "action_cable/engine"
 require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
+
+config.generators do |g|
+  g.jbuilder false
+  g.javascripts false
+  g.stylesheets false
+  g.helper false
+  g.test_framework false
+end
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
