@@ -16,13 +16,6 @@ require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
 
-config.generators do |g|
-  g.jbuilder false
-  g.javascripts false
-  g.stylesheets false
-  g.helper false
-  g.test_framework false
-end
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -37,6 +30,14 @@ module WonderfulPostApp
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+
+    config.generators do |g|
+      g.jbuilder false
+      g.javascripts false
+      g.stylesheets false
+      g.helper false
+      g.test_framework false
+    end
 
     # Don't generate system test files.
     config.generators.system_tests = nil
