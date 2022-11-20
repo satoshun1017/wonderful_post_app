@@ -15,5 +15,7 @@
  <%= link_to 'Back', articles_path %>
 <%
 =end%>
-<%= link_to '編集', edit_article_path(@article), , class: "btn btn-warning" %> |
+<% if current_user&.id == @article.user_id %>
+<%= link_to '編集', edit_article_path(@article), , class: "btn btn-warning" %>
+<% end %>
 <%= link_to '一覧', articles_path, class: "btn-secondary" %>
